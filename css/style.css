@@ -162,7 +162,6 @@ nav div .navbar-nav .nav-item .nav-link {
 }
 .hospitality-introduction .hm-introduction {
   height: 90vh;
-  clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 100%, 0 0);
   display: flex;
   text-shadow: 4px 4px #000000;
   justify-content: center;
@@ -271,18 +270,22 @@ nav div .navbar-nav .nav-item .nav-link {
   font-family: "Poppins";
 }
 
+/* DEMO-SPECIFIC STYLES */
+.typewriter {
+  top: 30%;
+  bottom: 20%;
+}
 .typewriter h1 {
+  color: #fff;
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
-  border-right: 0.1em solid #832161;
-  /* The typwriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
   margin: 0 auto;
   /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   /* Adjust as needed */
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation: typing 2.5s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
 /* The typing effect */
@@ -300,51 +303,7 @@ nav div .navbar-nav .nav-item .nav-link {
     border-color: transparent;
   }
   50% {
-    border-color: #832161;
-  }
-}
-.output {
-  text-align: center;
-  font-family: "Source Code Pro", monospace;
-  color: #ffffff;
-}
-.output h1 {
-  font-size: 30px;
-}
-
-/* Cursor Styling */
-.cursor::after {
-  content: "";
-  display: inline-block;
-  margin-left: 3px;
-  background-color: white;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-iteration-count: infinite;
-}
-
-h1.cursor::after {
-  height: 24px;
-  width: 13px;
-}
-
-p.cursor::after {
-  height: 13px;
-  width: 6px;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  49% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
+    border-color: orange;
   }
 }
 @keyframes float {

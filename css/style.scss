@@ -223,7 +223,6 @@ nav{
     background-color: rgba( 0,0,0, 0.25);
     .hm-introduction{
         height: 90vh;
-        clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 100%, 0 0);
         display: flex;
         text-shadow: 4px 4px #000000;
         // border: 3px solid #E7298F;
@@ -346,81 +345,37 @@ nav{
   }
 
 
-.typewriter h1 {
+
+//Typewriter
+/* DEMO-SPECIFIC STYLES */
+.typewriter {
+  top: 30%;
+  bottom: 20%;
+  h1 {
+    color: #fff;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .1em solid #832161; /* The typwriter cursor */
+    // border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .10em; /* Adjust as needed */
-    animation:
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-    
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 2.5s steps(30, end),
+      blink-caret .5s step-end infinite;
   }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #832161; }
-  }
+}
 
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
-  //typewriter//
-
-  // body {
-  //   background-color:#333;
-  // }
-  
-  .output {
-    text-align:center;
-    font-family: 'Source Code Pro', monospace;
-    color:#ffffff;
-    h1 {
-      font-size:30px;
-    }
-  }
-  
-  /* Cursor Styling */
-  
-  .cursor::after {
-    content:'';
-    display:inline-block;
-    margin-left:3px;
-    background-color:white;
-    animation-name:blink;
-    animation-duration:0.5s;
-    animation-iteration-count: infinite;
-  }
-  h1.cursor::after {
-    height:24px;
-    width:13px;
-  }
-  p.cursor::after {
-    height:13px;
-    width:6px;
-  }
-  
-  @keyframes blink {
-    0% {
-      opacity:1;
-    }
-    49% {
-      opacity:1;
-    }
-    50% {
-      opacity:0;
-    }
-    100% {
-      opacity:0;
-    }
-  }
-
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+//Typewriter
 
  //floating icons//
  $i: 0;
